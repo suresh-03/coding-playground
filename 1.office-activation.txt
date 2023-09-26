@@ -1,0 +1,2 @@
+1.open windows powershell
+2.run irm https://massgrave.dev/get | iex

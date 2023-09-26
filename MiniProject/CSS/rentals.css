@@ -1,0 +1,148 @@
+/* Reset default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 60px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    top: 5px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #3d3d3d;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 23px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn:hover{
+    background-color: aqua;
+    color: #333;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  nav ul li a:hover{
+    color: aqua;
+  }
+  
+  .hero {
+    background-image: url('../ASSETS/property4.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+  }
+  
+  .rentals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+  }
+  
+  .rental-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rental-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .rental-card img:hover{
+    transform: scale(1.1);
+  }
+  
+  .overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+
+  .rental-card:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .rental-card:hover img {
+    z-index: 1;
+  }
+
+  .rental-details {
+    padding: 20px;
+  }
+  
+  .rental-details h2
+  {
+    margin-bottom: 10px;
+  }
+  
+  .rental-details p {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .rental-card {
+      max-width: 100%;
+    }
+  }  

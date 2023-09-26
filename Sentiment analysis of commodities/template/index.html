@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis of Commodities</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 140px;
+    background-image: linear-gradient(120deg,Gold,hsla(0, 0%, 0%, 0.938) 50%);
+    overflow: hidden;
+}
+
+main{
+    background-color: purple;
+    color: white;
+    border-radius: 30px;
+    height: 150px;
+}
+
+h1 {
+    text-align: center;
+    background-color: gold;
+    border-radius: 20px;
+}
+
+form {
+    margin: 20px auto;
+    width: 400px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    text-align: center;
+}
+
+footer p{
+    color: goldenrod;
+}
+
+    </style>
+    <h1>Sentiment Analysis of Commodities (Gold)</h1>
+    <form action="/prediction" method="post">
+        <textarea name="newheadline" rows="5" placeholder="Enter text for sentiment analysis"></textarea>
+        <input type="submit" value="predict">
+    </form>
+    <header>
+        <h1>Commodity Sentiment Analysis</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Result</h2>
+            {% if input %}
+            <p><strong>NEWS</strong>: {{ input }}</p>
+            {% endif %}
+            {% if output %}
+            <p><strong>PREDICTION</strong>: {{ output }}</p>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Commodity Sentiment Analysis</p>
+    </footer>
+</body>
+</html>
